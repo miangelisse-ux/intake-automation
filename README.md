@@ -6,6 +6,23 @@ Production-deployed Google Workspace automation for scheduling and managing walk
 
 This system was deployed to streamline client intake scheduling, reduce manual coordination, prevent double-booking, and automatically send confirmations to clients and alerts to admins.
 
+## Usage
+
+- User fills out a Google Form with intake appointment details.
+- The bound Apps Script reads the responses, checks for date/time conflicts, and creates a Google Calendar event.
+- If a client email is provided, the script sends a confirmation email.
+- At a scheduled time (optional), you can send daily summaries or run checks via time-driven triggers.
+
+Sample confirmation email:
+
+Walk-In Intake Appointment Confirmation  
+Client: Jane Doe  
+Date: Tuesday, February 20, 2026  
+Time: 10:00 AM – 11:00 AM  
+Location: ABC's For Success - 1550 Madruga Ave, Coral Gables, FL 33146  
+Please bring your insurance card and ID.
+
+
 ## Problem
 
 Manual intake appointment scheduling led to booking conflicts, missed confirmations, and inefficient staff communication. This automation standardizes scheduling, validates appointments, and sends automated notifications to clients and staff.
