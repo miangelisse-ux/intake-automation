@@ -90,7 +90,7 @@ Please bring your insurance card and ID.
 - Form submit trigger → onFormSubmit
 - (Optional) Time-driven trigger → for daily or periodic summaries/notifications
 
- ## Flow Overview:
+ ## Flow Overview
 - Form submission → Google Sheet → Apps Script → Google Calendar → Confirmation Email
 
 ## How to Run
