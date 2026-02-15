@@ -79,10 +79,13 @@ Manual intake appointment scheduling led to booking conflicts, missed confirmati
 
 ## How to Run
 
-- Once triggers are set, the system runs automatically.
+- **Automatic execution (recommended):**  
+  1. The script runs automatically whenever a new form submission is received (`onFormSubmit`).  
+  2. Any daily summary or reporting functions run automatically if a time-driven trigger is set.  
 
-To manually test in the Apps Script editor:
-1. Open Apps Script in your Sheet.
-2. Select onFormSubmit or a test function.
-3. Click Run.
-4. Check your calendar and email for the result.
+- **Manual execution (for testing):**  
+  1. Open the Apps Script editor from the bound Google Sheet (**Extensions → Apps Script**).  
+  2. Select the function `onFormSubmit` or any other test function from the dropdown.  
+  3. Click **Run ▶** to execute manually.  
+     - For `onFormSubmit`, you may need to provide a mock `e` object with test values.  
+  4. Check the Google Calendar and email inbox to confirm the automation is working correctly.
