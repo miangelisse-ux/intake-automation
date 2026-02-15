@@ -59,23 +59,30 @@ Manual intake appointment scheduling led to booking conflicts, missed confirmati
 
 ## Setup
 
-1. Create a Google Apps Script project.
-2. Copy the contents of `src/intake_automation.gs` into your project.
-3. Configure calendar and folder:
+1. Open the Google Sheet linked to your intake Google Form (this Sheet stores form responses).
+2. Go to Extensions → Apps Script in the Sheet.
+3. Copy the contents of `src/intake_automation.gs` into your project.
+4. Configure calendar and folder:
    - Replace `CALENDAR_ID` with your Google Calendar ID for intake appointments.
    - Replace `ROOT_FOLDER_ID` with your Google Drive folder ID for client files (optional).
-4. Set admin email:
+5. Set admin email:
    ```javascript
    const ADMIN_EMAIL = "example@example.com";
 
-5. Optional: Map client or staff emails if needed (not required for basic setup).
-6. Set up triggers:
+6. Optional: Map client or staff emails if needed (not required for basic setup).
+7. Set up triggers:
 - Form submit trigger → onFormSubmit
 - (Optional) Time-driven trigger → for daily or periodic summaries/notifications
 
+ ## Flow Overview:
+- Form submission → Google Sheet → Apps Script → Google Calendar → Confirmation Email
 
 ## How to Run
 
-- Link the Google Form to the Apps Script as a trigger on form submission.
-- Clients submit intake information through the Google Form.
-- The script automatically schedules the appointment, creates a calendar event, and sends confirmation emails.
+- Once triggers are set, the system runs automatically.
+
+To manually test in the Apps Script editor:
+1. Open Apps Script in your Sheet.
+2. Select onFormSubmit or a test function.
+3. Click Run.
+4. Check your calendar and email for the result.
