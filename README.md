@@ -59,25 +59,20 @@ Manual intake appointment scheduling led to booking conflicts, missed confirmati
 
 ## Setup
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/miangelisse-ux/intake-automation.git
-   ```
+1. Create a Google Apps Script project.
+2. Copy the contents of `src/intake_automation.gs` into your project.
+3. Configure calendar and folder:
+   - Replace `CALENDAR_ID` with your Google Calendar ID for intake appointments.
+   - Replace `ROOT_FOLDER_ID` with your Google Drive folder ID for client files (optional).
+4. Set admin email:
+   ```javascript
+   const ADMIN_EMAIL = "example@example.com";
 
-2. Navigate to the project folder:
-```
-cd intake-automation
+5. Optional: Map client or staff emails if needed (not required for basic setup).
+6. Set up triggers:
+- Form submit trigger → onFormSubmit
+- (Optional) Time-driven trigger → for daily or periodic summaries/notifications
 
-```
-3. Open Google Apps Script and create a new project.
-
-4. Copy the contents of `src/intake_automation.gs` into the script project.
-
-5. Configure:
-
-- Replace `ADMIN_EMAIL` with your admin email.
-- Replace `CALENDAR_ID` with your Google Calendar ID for intake appointments.
-- Replace `ROOT_FOLDER_ID` with the folder ID where client files are stored     (optional).
 
 ## How to Run
 
