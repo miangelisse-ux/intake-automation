@@ -75,9 +75,9 @@ cd intake-automation
 
 5. Configure:
 
-- Replace ADMIN_EMAIL with your admin email.
-- Replace CALENDAR_ID with your Google Calendar ID for intake appointments.
-- Replace ROOT_FOLDER_ID with the folder ID where client files are stored     (optional).
+- Replace `ADMIN_EMAIL` with your admin email.
+- Replace `CALENDAR_ID` with your Google Calendar ID for intake appointments.
+- Replace `ROOT_FOLDER_ID` with the folder ID where client files are stored     (optional).
 
 ## How to Run
 
