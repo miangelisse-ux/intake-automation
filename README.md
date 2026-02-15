@@ -71,16 +71,16 @@ cd intake-automation
 ```
 3. Open Google Apps Script and create a new project.
 
-4. Copy the contents of src/intake_automation.gs into the script project.
+4. Copy the contents of `src/intake_automation.gs` into the script project.
 
 5. Configure:
-```
-  Replace ADMIN_EMAIL with your admin email.
-  Replace CALENDAR_ID with your Google Calendar ID for intake appointments.
-  Replace ROOT_FOLDER_ID with the folder ID where client files are stored     (optional).
-```
+
+- Replace ADMIN_EMAIL with your admin email.
+- Replace CALENDAR_ID with your Google Calendar ID for intake appointments.
+- Replace ROOT_FOLDER_ID with the folder ID where client files are stored     (optional).
+
 ## How to Run
-```
-Link the Google Form to the Apps Script as a trigger on form submission.
-Clients submit intake information through the Google Form.
-The script automatically schedules the appointment, creates a calendar event, and sends confirmation emails.
+
+- Link the Google Form to the Apps Script as a trigger on form submission.
+- Clients submit intake information through the Google Form.
+- The script automatically schedules the appointment, creates a calendar event, and sends confirmation emails.
